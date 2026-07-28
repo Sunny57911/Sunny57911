@@ -47,40 +47,6 @@ My work focuses on:
 
 ---
 
-# 📂 Project Structure
-
-```text
-Portfolio/
-│
-├── index.html
-├── about.html
-├── experience.html
-├── projects.html
-├── research.html
-├── skills.html
-├── contact.html
-│
-├── assets/
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── responsive.css
-│   │   └── animations.css
-│   │
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── particles.js
-│   │   ├── typing.js
-│   │   └── animations.js
-│   │
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-│
-└── README.md
-```
-
----
-
 # 🚀 Technologies Used
 
 ### Frontend
