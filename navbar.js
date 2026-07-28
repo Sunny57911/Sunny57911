@@ -25,7 +25,8 @@
   const headerHTML = `
     <div class="station-bar">
       <div class="station-bar__inner">
-        <span><span class="station-dot"></span>STATION: SUNNY KUMAR &nbsp;/&nbsp; <span class="hl">28.4595°N, 77.0266°E</span> &nbsp;/&nbsp; GURUGRAM, IN</span>
+        // <span><span class="station-dot"></span>STATION: SUNNY KUMAR &nbsp;/&nbsp; <span class="hl">28.4595°N, 77.0266°E</span> &nbsp;/&nbsp; GURUGRAM, IN</span>
+        <span><span class="station-dot"></span>SUNNY57911 &nbsp;/&nbsp; GURUGRAM, IN</span>
         <span id="stationTime">--:--:-- IST</span>
       </div>
     </div>
