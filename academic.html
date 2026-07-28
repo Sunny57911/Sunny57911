@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic — Sunny Kumar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contour-field" id="contourField"></div>
+
+<div class="shell">
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <section style="padding-bottom:0;">
+      <div class="wrap">
+        <div class="eyebrow reveal in">Academic record</div>
+        <h1 class="reveal in" style="font-size:clamp(32px,5vw,52px);max-width:680px;">
+          Six years, two degrees, one atmosphere.
+        </h1>
+        <p class="reveal in" style="max-width:560px;color:var(--text-muted);font-size:16.5px;margin-top:18px;">
+          From general science in Kota to a Master's in Atmospheric Science at NIT Rourkela —
+          the transcript below is plotted like a seismograph trace, each degree a station along the line.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRANSCRIPT / SEISMOGRAPH TIMELINE -->
+    <section>
+      <div class="wrap">
+        <div class="transcript reveal">
+          <svg viewBox="0 0 1000 160" preserveAspectRatio="none" class="transcript__wave">
+            <path d="M0 80 L120 80 L150 30 L180 130 L220 80 L520 80 L555 20 L590 140 L630 80 L1000 80"
+                  fill="none" stroke="var(--teal)" stroke-width="2"/>
+          </svg>
+          <div class="transcript__nodes">
+            <div class="tnode" style="left:18%;">
+              <span class="tnode__dot"></span>
+              <div class="tnode__card">
+                <span class="tag">2016 – 2019</span>
+                <h3 style="margin-top:10px;font-size:19px;">B.Sc. General</h3>
+                <p style="color:var(--text-muted);font-size:14px;margin-top:6px;">Physics, Chemistry & Mathematics</p>
+                <p style="color:var(--text-dim);font-size:13px;margin-top:10px;">Kota Govt. College (UoK) — Kota, Rajasthan, India</p>
+              </div>
+            </div>
+            <div class="tnode" style="left:58%;">
+              <span class="tnode__dot amber"></span>
+              <div class="tnode__card">
+                <span class="tag" style="color:var(--amber);border-color:#8a5a1c;">2019 – 2021</span>
+                <h3 style="margin-top:10px;font-size:19px;">M.Sc. Atmospheric Science</h3>
+                <p style="color:var(--text-muted);font-size:14px;margin-top:6px;">Numerical weather prediction · climate dynamics</p>
+                <p style="color:var(--text-dim);font-size:13px;margin-top:10px;">National Institute of Technology, Rourkela — Odisha, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFERENCE BADGE -->
+    <section class="tight">
+      <div class="wrap">
+        <div class="card conference-card reveal">
+          <div class="conference-badge">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="var(--amber)" stroke-width="2"/><path d="M24 12v12l8 6" stroke="var(--amber)" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Conference presentation</div>
+            <h3 style="font-size:20px;">International Symposium on Tropical Meteorology — INTROMET'21</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14.5px;max-width:640px;">
+              Presented research on Indian Summer Monsoon Rainfall (ISMR) prediction using AI and machine
+              learning techniques, applying ANN, SVR, CNN and LSTM models to homogeneous rainfall regions of India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC RESEARCH PROJECTS -->
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Academic research</div>
+          <h2>Three studies from the Rourkela years</h2>
+        </div>
+
+        <div class="grid" style="grid-template-columns:1fr;gap:16px;">
+
+          <div class="card research-row reveal">
+            <div class="research-row__meta">
+              <span class="tag">ML / Monsoon</span>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:10px;">NIT Rourkela</span>
+            </div>
+            <div>
+              <h3 style="font-size:18px;">AI & ML for Prediction of Summer Monsoon Rainfall</h3>
+              <p style="color:var(--text-muted);margin-top:10px;font-size:14.5px;">
+                Used ANN, SVR, CNN and LSTM architectures to predict Indian Summer Monsoon Rainfall (ISMR)
+                across homogeneous regions of India — the basis for the INTROMET'21 presentation above.
+              </p>
+            </div>
+          </div>
+
+          <div class="card research-row reveal">
+            <div class="research-row__meta">
+              <span class="tag">WRF / Cyclones</span>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:10px;">NIT Rourkela</span>
+            </div>
+            <div>
+              <h3 style="font-size:18px;">Simulation Class Project — Cyclone Tracking</h3>
+              <p style="color:var(--text-muted);margin-top:10px;font-size:14.5px;">
+                Nested-domain WRF simulations using FNL data to track cyclones MAHA and BULBUL, improving
+                the accuracy and precision of cyclone-path forecasting.
+              </p>
+            </div>
+          </div>
+
+          <div class="card research-row reveal">
+            <div class="research-row__meta">
+              <span class="tag">NWP / WRF-ARW</span>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:10px;">NIT Rourkela</span>
+            </div>
+            <div>
+              <h3 style="font-size:18px;">Numerical Weather Prediction Simulation Internship</h3>
+              <p style="color:var(--text-muted);margin-top:10px;font-size:14.5px;">
+                Ran WRF-ARW model simulations to track the MAHA cyclone, analysing model output to sharpen
+                the precision of cyclone tracking and forecasting.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+</div>
+
+<style>
+  .transcript{position:relative;padding:70px 0 190px;}
+  .transcript__wave{width:100%;height:160px;display:block;opacity:0.9;}
+  .transcript__nodes{position:absolute;top:0;left:0;right:0;height:100%;}
+  .tnode{position:absolute;top:64px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;}
+  .tnode__dot{
+    width:12px;height:12px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(79,216,196,0.15);
+    margin-bottom:20px;
+  }
+  .tnode__dot.amber{background:var(--amber);box-shadow:0 0 0 4px rgba(242,169,59,0.15);}
+  .tnode__card{
+    width:260px;background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;
+  }
+  @media (max-width:780px){
+    .transcript{padding-bottom:520px;}
+    .tnode{left:50% !important;position:absolute;}
+    .tnode:nth-child(1){top:40px;}
+    .tnode:nth-child(2){top:290px;}
+  }
+
+  .conference-card{display:flex;gap:22px;align-items:flex-start;border-color:#3a3320;}
+  .conference-badge{width:54px;height:54px;flex-shrink:0;}
+  .conference-badge svg{width:100%;height:100%;}
+
+  .research-row{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start;}
+  .research-row__meta{display:flex;flex-direction:column;gap:4px;}
+  @media (max-width:640px){.research-row{grid-template-columns:1fr;}}
+</style>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

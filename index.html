@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunny Kumar — Meteorologist & Climate/Energy Modelling Consultant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contour-field" id="contourField"></div>
+
+<div class="shell">
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section style="padding-top:56px;">
+      <div class="wrap hero-grid">
+        <div class="reveal in">
+          <div class="eyebrow">Meteorologist · Climate & Energy Modelling Consultant</div>
+          <h1 style="font-size:clamp(36px,6vw,64px);line-height:1.05;max-width:720px;">
+            Reading the atmosphere.<br>Modelling the transition.
+          </h1>
+          <p style="max-width:560px;color:var(--text-muted);font-size:17px;margin-top:22px;">
+            I build high-resolution weather and climate models, bias-correct them with machine learning,
+            and turn that science into energy-transition strategy — from cyclone tracks over the Bay of Bengal
+            to state-level renewable roadmaps for Jharkhand and Chhattisgarh.
+          </p>
+          <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+            <a href="professional.html" class="btn primary">View experience →</a>
+            <a href="contact.html" class="btn">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="reveal in" style="display:flex;flex-direction:column;align-items:center;gap:22px;">
+          <div class="radar-photo">
+            <div class="radar-ring"></div>
+            <div class="radar-ring r2"></div>
+            <img src="assets/profile.png" alt="Portrait of Sunny Kumar">
+          </div>
+
+          <!-- SCAN TICKER -->
+          <div class="scan-ticker">
+            <button class="scan-ticker__arrow" id="scanPrev" aria-label="Previous">‹</button>
+            <div class="scan-ticker__display">
+              <span class="scan-ticker__label">CURRENTLY SCANNING</span>
+              <div class="scan-ticker__word" id="scanWord">WRF-ARW</div>
+            </div>
+            <button class="scan-ticker__arrow" id="scanNext" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELEMETRY STRIP -->
+    <section class="tight">
+      <div class="wrap">
+        <hr class="rule">
+        <div class="telemetry reveal">
+          <div class="telemetry__item">
+            <span class="telemetry__label">Field experience</span>
+            <span class="telemetry__value">5<small>yrs</small></span>
+          </div>
+          <div class="telemetry__item">
+            <span class="telemetry__label">Research organisations</span>
+            <span class="telemetry__value">4</span>
+          </div>
+          <div class="telemetry__item">
+            <span class="telemetry__label">States modelled</span>
+            <span class="telemetry__value">3<small>+</small></span>
+          </div>
+          <div class="telemetry__item">
+            <span class="telemetry__label">Core modelling stack</span>
+            <span class="telemetry__value">WRF / NWP</span>
+          </div>
+          <div class="telemetry__item">
+            <span class="telemetry__label">ML techniques applied</span>
+            <span class="telemetry__value">ANN·LSTM·XGB</span>
+          </div>
+        </div>
+        <hr class="rule">
+      </div>
+    </section>
+
+    <!-- FOCUS AREAS -->
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Focus areas</div>
+          <h2>Where climate science meets the energy grid</h2>
+          <p>Four threads run through the work below: forecasting the atmosphere, correcting it against ground
+          truth, modelling the energy systems it powers, and translating all of it into policy that governments
+          can act on.</p>
+        </div>
+
+        <div class="grid focus-grid">
+
+          <div class="card focus-card reveal">
+            <div class="focus-icon">
+              <svg viewBox="0 0 48 48"><path d="M8 30c4-10 10-16 16-16s12 6 16 16" stroke="var(--teal)" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="14" r="4" fill="var(--amber)"/></svg>
+            </div>
+            <h3>Weather & Climate Modelling</h3>
+            <p style="color:var(--text-muted);margin-top:12px;font-size:14.5px;">NWP / WRF-ARW simulations, cyclone-track modelling (MAHA, BULBUL), and CORDEX/IMD-based
+            temperature & precipitation projections down to district and gram-panchayat level.</p>
+          </div>
+
+          <div class="card focus-card reveal">
+            <div class="focus-icon">
+              <svg viewBox="0 0 48 48"><path d="M6 24h6l4-14 6 28 4-20 3 6h13" stroke="var(--teal)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>ML Bias-Correction</h3>
+            <p style="color:var(--text-muted);margin-top:12px;font-size:14.5px;">ANN, LSTM, XGBoost and stacked models trained to pull ERA5 reanalysis and downscaled
+            solar/wind data closer to observed ground truth across South Asia.</p>
+          </div>
+
+          <div class="card focus-card reveal">
+            <div class="focus-icon">
+              <svg viewBox="0 0 48 48"><rect x="8" y="26" width="6" height="12" fill="var(--amber)"/><rect x="18" y="18" width="6" height="20" fill="var(--teal)"/><rect x="28" y="10" width="6" height="28" fill="var(--amber)"/><rect x="38" y="20" width="6" height="18" fill="var(--teal)"/></svg>
+            </div>
+            <h3>Energy System Modelling</h3>
+            <p style="color:var(--text-muted);margin-top:12px;font-size:14.5px;">PyPSA-based demand projection and transition-pathway modelling for Jharkhand and Uttar
+            Pradesh, including full state energy databases and renewable resource assessments.</p>
+          </div>
+
+          <div class="card focus-card reveal">
+            <div class="focus-icon">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" stroke="var(--teal)" stroke-width="2" fill="none"/><path d="M24 8v8M24 32v8M8 24h8M32 24h8" stroke="var(--amber)" stroke-width="2"/></svg>
+            </div>
+            <h3>Just Transition & Policy</h3>
+            <p style="color:var(--text-muted);margin-top:12px;font-size:14.5px;">Turning model output into evidence for state and national decarbonisation strategy —
+            stakeholder roundtables, technical documentation, and Just Transition roadmaps.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE STRIP -->
+    <section class="tight">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Explore</div>
+          <h2>The full record</h2>
+        </div>
+        <div class="grid explore-grid reveal">
+          <a href="academic.html" class="card explore-card">
+            <span class="tag">01</span>
+            <h3 style="margin-top:14px;">Academic</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">M.Sc. Atmospheric Science, NIT Rourkela — plus conference work on monsoon prediction.</p>
+            <span class="explore-arrow">→</span>
+          </a>
+          <a href="professional.html" class="card explore-card">
+            <span class="tag">02</span>
+            <h3 style="margin-top:14px;">Professional</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Five roles across four organisations, plotted as a career ascent profile.</p>
+            <span class="explore-arrow">→</span>
+          </a>
+          <a href="projects.html" class="card explore-card">
+            <span class="tag">03</span>
+            <h3 style="margin-top:14px;">Projects</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Case files on cyclone tracking, downscaling, physical risk, and monsoon ML.</p>
+            <span class="explore-arrow">→</span>
+          </a>
+          <a href="skills.html" class="card explore-card">
+            <span class="tag">04</span>
+            <h3 style="margin-top:14px;">Skills</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Languages, modelling tools, GIS stack and ML frameworks, mapped as a radar.</p>
+            <span class="explore-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+</div>
+
+<style>
+  .hero-grid{display:grid;grid-template-columns:1.3fr 0.9fr;gap:40px;align-items:center;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+
+  .radar-photo{
+    position:relative;width:320px;height:320px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .radar-photo img{
+    width:260px;height:260px;object-fit:cover;border-radius:50%;
+    border:2px solid var(--bg-raised);
+    box-shadow:0 0 0 1px var(--line), 0 20px 60px rgba(0,0,0,0.5);
+    position:relative;z-index:2;
+  }
+  .radar-ring{
+    position:absolute;width:320px;height:320px;border-radius:50%;
+    border:1px solid var(--line-soft);
+  }
+  .radar-ring::after{
+    content:'';position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 0deg, rgba(79,216,196,0.35), transparent 30%);
+    animation:sweep 4.5s linear infinite;
+  }
+  .radar-ring.r2{width:280px;height:280px;top:20px;left:20px;border-color:var(--line);}
+  @keyframes sweep{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+  .scan-ticker{
+    display:flex;align-items:center;gap:14px;
+    background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;
+    padding:10px 14px;min-width:280px;
+  }
+  .scan-ticker__arrow{
+    background:none;border:1px solid var(--line);color:var(--text-muted);
+    width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:15px;line-height:1;
+    flex-shrink:0;transition:border-color .2s ease, color .2s ease;
+  }
+  .scan-ticker__arrow:hover{border-color:var(--teal);color:var(--teal);}
+  .scan-ticker__display{flex:1;text-align:center;overflow:hidden;}
+  .scan-ticker__label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--text-dim);}
+  .scan-ticker__word{
+    font-family:var(--mono);font-size:15px;color:var(--teal);font-weight:600;
+    margin-top:4px;transition:opacity .35s ease, transform .35s ease;
+    letter-spacing:0.02em;
+  }
+  .scan-ticker__word.fade{opacity:0;transform:translateY(4px);}
+
+  .telemetry{display:flex;justify-content:space-between;padding:26px 0;flex-wrap:wrap;gap:20px;}
+  .telemetry__item{display:flex;flex-direction:column;gap:8px;min-width:130px;}
+  .telemetry__label{font-family:var(--mono);font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;color:var(--text-dim);}
+  .telemetry__value{font-family:var(--display);font-size:24px;color:var(--teal);font-weight:600;}
+  .telemetry__value small{font-family:var(--mono);font-size:13px;color:var(--text-muted);margin-left:3px;}
+
+  .focus-grid{grid-template-columns:repeat(4,1fr);}
+  @media (max-width:980px){.focus-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.focus-grid{grid-template-columns:1fr;}}
+  .focus-card{transition:border-color .25s ease, transform .25s ease;}
+  .focus-card:hover{border-color:var(--teal-dim);transform:translateY(-4px);}
+  .focus-icon{width:48px;height:48px;margin-bottom:6px;}
+  .focus-icon svg{width:100%;height:100%;}
+
+  .explore-grid{grid-template-columns:repeat(4,1fr);}
+  @media (max-width:980px){.explore-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.explore-grid{grid-template-columns:1fr;}}
+  .explore-card{position:relative;transition:border-color .25s ease, transform .25s ease;}
+  .explore-card:hover{border-color:var(--teal-dim);transform:translateY(-4px);}
+  .explore-arrow{position:absolute;bottom:22px;right:22px;color:var(--teal);font-family:var(--mono);}
+</style>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
+<script>
+  const scanTerms = [
+    'WRF-ARW', 'NWP MODELS', 'CYCLONE TRACKING', 'ERA5 BIAS-CORRECTION',
+    'KRIGING INTERPOLATION', 'PYPSA ENERGY SYSTEMS', 'CORDEX PROJECTIONS',
+    'LSTM / XGBOOST', 'JUST TRANSITION', 'RENEWABLE RESOURCE MAPPING'
+  ];
+  let scanIndex = 0;
+  const scanWordEl = document.getElementById('scanWord');
+  let scanInterval;
+
+  function showScanTerm(i){
+    scanWordEl.classList.add('fade');
+    setTimeout(() => {
+      scanWordEl.textContent = scanTerms[i];
+      scanWordEl.classList.remove('fade');
+    }, 220);
+  }
+
+  function startScanAuto(){
+    scanInterval = setInterval(() => {
+      scanIndex = (scanIndex + 1) % scanTerms.length;
+      showScanTerm(scanIndex);
+    }, 2600);
+  }
+  function stopScanAuto(){ clearInterval(scanInterval); }
+
+  document.getElementById('scanPrev').addEventListener('click', () => {
+    stopScanAuto();
+    scanIndex = (scanIndex - 1 + scanTerms.length) % scanTerms.length;
+    showScanTerm(scanIndex);
+    startScanAuto();
+  });
+  document.getElementById('scanNext').addEventListener('click', () => {
+    stopScanAuto();
+    scanIndex = (scanIndex + 1) % scanTerms.length;
+    showScanTerm(scanIndex);
+    startScanAuto();
+  });
+  startScanAuto();
+</script>
+</body>
+</html>

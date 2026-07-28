@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sunny Kumar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contour-field" id="contourField"></div>
+
+<div class="shell">
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <section style="padding-bottom:0;">
+      <div class="wrap">
+        <div class="eyebrow reveal in">Case files</div>
+        <h1 class="reveal in" style="font-size:clamp(32px,5vw,52px);max-width:700px;">
+          Three problems, one climate.
+        </h1>
+        <p class="reveal in" style="max-width:600px;color:var(--text-muted);font-size:16.5px;margin-top:18px;">
+          Industry research spanning energy-system modelling, dataset downscaling, and physical climate
+          risk — each file below lists the datasets, methods and outcome.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="casefiles">
+
+          <!-- CASE 01 -->
+          <article class="case reveal">
+            <div class="case__visual">
+              <svg viewBox="0 0 200 140">
+                <g stroke="var(--teal)" stroke-width="1.4" fill="none" opacity="0.9">
+                  <rect x="20" y="90" width="16" height="30"/>
+                  <rect x="50" y="70" width="16" height="50"/>
+                  <rect x="80" y="40" width="16" height="80"/>
+                  <rect x="110" y="60" width="16" height="60"/>
+                  <rect x="140" y="30" width="16" height="90"/>
+                </g>
+                <circle cx="170" cy="20" r="10" fill="var(--amber)" opacity="0.85"/>
+              </svg>
+            </div>
+            <div class="case__body">
+              <div class="case__head">
+                <span class="tag">01</span>
+                <span class="tag" style="color:var(--amber);border-color:#8a5a1c;">Present · CEED</span>
+              </div>
+              <h3>Energy System Modelling — Jharkhand & Uttar Pradesh</h3>
+              <p>Full-stack state energy modelling: PyPSA-based system builds, block/district-level renewable
+              resource assessment, and construction of the State Energy Database from the ground up. ERA5 and
+              TerraClimate data were analysed to trace how climate patterns feed back into sector-level energy demand.</p>
+              <div class="case__tags">
+                <span class="tag">PyPSA</span><span class="tag">Python</span><span class="tag">ERA5</span><span class="tag">TerraClimate</span>
+                <span class="tag">Energy Dashboard</span><span class="tag">Renewable Assessment</span><span class="tag">NER-India DB</span>
+              </div>
+
+              <!-- LIVE DATA EXHIBIT: real Sankey output, lazy-loaded -->
+              <div class="exhibit" id="sankeyExhibit">
+                <button class="exhibit__trigger" id="sankeyTrigger" type="button">
+                  <span class="exhibit__icon">
+                    <svg viewBox="0 0 32 32" width="20" height="20">
+                      <path d="M4 8 C14 8 10 16 22 16 C10 16 14 24 4 24" stroke="var(--teal)" stroke-width="1.6" fill="none"/>
+                      <path d="M4 8 C14 8 12 12 22 12" stroke="var(--amber)" stroke-width="1.6" fill="none" opacity="0.7"/>
+                      <path d="M4 24 C14 24 12 20 22 20" stroke="var(--amber)" stroke-width="1.6" fill="none" opacity="0.7"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <b>Live exhibit —</b> load the actual Jharkhand state energy-flow Sankey diagram
+                    <small>Interactive Plotly output from the State Energy Database build · ~4.4 MB, loads on click</small>
+                  </span>
+                  <span class="exhibit__arrow">▾</span>
+                </button>
+                <div class="exhibit__frame" id="sankeyFrame" hidden>
+                  <iframe id="sankeyIframe" title="Jharkhand state energy flow Sankey diagram" loading="lazy"></iframe>
+                  <a href="assets/jharkhand_energy_sankey.html" target="_blank" class="exhibit__open">Open full screen ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 02 -->
+          <article class="case reveal">
+            <div class="case__visual">
+              <svg viewBox="0 0 200 140">
+                <g stroke="var(--teal)" stroke-width="1" opacity="0.8">
+                  <line x1="20" y1="20" x2="20" y2="120"/><line x1="55" y1="20" x2="55" y2="120"/>
+                  <line x1="90" y1="20" x2="90" y2="120"/><line x1="125" y1="20" x2="125" y2="120"/><line x1="160" y1="20" x2="160" y2="120"/>
+                  <line x1="20" y1="20" x2="160" y2="20"/><line x1="20" y1="55" x2="160" y2="55"/>
+                  <line x1="20" y1="90" x2="160" y2="90"/><line x1="20" y1="120" x2="160" y2="120"/>
+                </g>
+                <circle cx="55" cy="55" r="4" fill="var(--amber)"/>
+                <circle cx="90" cy="90" r="4" fill="var(--amber)"/>
+                <circle cx="125" cy="55" r="4" fill="var(--amber)"/>
+              </svg>
+            </div>
+            <div class="case__body">
+              <div class="case__head">
+                <span class="tag">02</span>
+                <span class="tag">Past · Genesis Ray Energy</span>
+              </div>
+              <h3>Downscaling & Bias-Corrected ERA5 — Solar/Wind, South Asia</h3>
+              <p>A high-resolution downscaling technique for historical solar and wind data, refined with Kriging
+              and NWP for fine-resolution accuracy. LSTM, XGBoost, ANN and stacked models were layered on top to
+              bias-correct the downscaled ERA5 output for renewable-industry use.</p>
+              <div class="case__tags">
+                <span class="tag">Kriging</span><span class="tag">NWP</span><span class="tag">LSTM</span><span class="tag">XGBoost</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 03 -->
+          <article class="case reveal">
+            <div class="case__visual">
+              <svg viewBox="0 0 200 140">
+                <g stroke="var(--coral)" stroke-width="1.6" fill="none">
+                  <path d="M100 70 m0 -30 a30 30 0 1 1 -21 51" />
+                  <path d="M100 70 m0 -18 a18 18 0 1 1 -13 31" />
+                </g>
+                <circle cx="100" cy="70" r="4" fill="var(--coral)"/>
+              </svg>
+            </div>
+            <div class="case__body">
+              <div class="case__head">
+                <span class="tag">03</span>
+                <span class="tag">Past · Genesis Ray Energy</span>
+              </div>
+              <h3>Physical & Transition Risk Modelling</h3>
+              <p>Continuous improvement of weather-data development across CMIP5, CMIP6 and CORDEX, paired with
+              in-depth analysis of cyclonic events. Historical ERA5 data was used to characterise past storms,
+              then combined with current weather patterns to project the likely paths of future tropical cyclones
+              and depressions.</p>
+              <div class="case__tags">
+                <span class="tag">CMIP5/6</span><span class="tag">CORDEX</span><span class="tag">ERA5</span><span class="tag">Cyclone tracking</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CROSS-LINK to academic research -->
+    <section class="tight">
+      <div class="wrap">
+        <div class="card reveal" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Also see</div>
+            <h3 style="font-size:19px;">Academic research — monsoon ML and WRF cyclone simulations</h3>
+            <p style="color:var(--text-muted);margin-top:8px;font-size:14.5px;max-width:520px;">Three further studies
+            from the NIT Rourkela years, including the INTROMET'21 conference presentation.</p>
+          </div>
+          <a href="academic.html" class="btn">View academic page →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+</div>
+
+<style>
+  .casefiles{display:flex;flex-direction:column;gap:20px;}
+  .case{
+    display:grid;grid-template-columns:200px 1fr;gap:30px;
+    background:var(--bg-panel);border:1px solid var(--line);border-radius:12px;
+    padding:26px;align-items:start;
+    transition:border-color .25s ease;
+  }
+  .case:first-child{align-items:center;}
+  .case:hover{border-color:var(--teal-dim);}
+
+  .exhibit{margin-top:20px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg-panel-2);}
+  .exhibit__trigger{
+    width:100%;display:flex;align-items:center;gap:14px;text-align:left;
+    background:none;border:none;color:var(--text);cursor:pointer;padding:16px 18px;
+    font-family:var(--body);
+  }
+  .exhibit__trigger:hover{background:rgba(79,216,196,0.06);}
+  .exhibit__icon{flex-shrink:0;width:34px;height:34px;border:1px solid var(--teal-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .exhibit__trigger b{color:var(--teal);}
+  .exhibit__trigger small{display:block;color:var(--text-dim);font-family:var(--mono);font-size:11px;margin-top:4px;}
+  .exhibit__arrow{margin-left:auto;color:var(--teal);flex-shrink:0;transition:transform .2s ease;}
+  .exhibit__trigger[aria-expanded="true"] ~ .exhibit__frame{display:block;}
+  .exhibit__frame{border-top:1px solid var(--line);padding:14px;}
+  .exhibit__frame iframe{width:100%;height:520px;border:1px solid var(--line);border-radius:8px;background:#fff;}
+  .exhibit__open{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--teal);}
+  @media (max-width:600px){.exhibit__frame iframe{height:340px;}}
+  .case__visual{background:var(--bg-panel-2);border-radius:8px;padding:10px;}
+  .case__visual svg{width:100%;height:auto;}
+  .case__head{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+  .case__body h3{font-size:20px;margin-bottom:10px;}
+  .case__body p{color:var(--text-muted);font-size:14.5px;}
+  .case__tags{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
+  @media (max-width:760px){
+    .case{grid-template-columns:1fr;}
+    .case__visual{max-width:180px;}
+  }
+</style>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
+<script>
+  const sankeyTrigger = document.getElementById('sankeyTrigger');
+  const sankeyFrame = document.getElementById('sankeyFrame');
+  const sankeyIframe = document.getElementById('sankeyIframe');
+  let sankeyLoaded = false;
+  sankeyTrigger.setAttribute('aria-expanded', 'false');
+  sankeyTrigger.addEventListener('click', () => {
+    const expanded = sankeyTrigger.getAttribute('aria-expanded') === 'true';
+    sankeyTrigger.setAttribute('aria-expanded', String(!expanded));
+    sankeyFrame.hidden = expanded;
+    sankeyTrigger.querySelector('.exhibit__arrow').textContent = expanded ? '▾' : '▴';
+    if(!sankeyLoaded){
+      sankeyIframe.src = 'assets/jharkhand_energy_sankey.html';
+      sankeyLoaded = true;
+    }
+  });
+</script>
+</body>
+</html>
