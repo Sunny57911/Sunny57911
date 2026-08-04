@@ -18,14 +18,14 @@
       name: "State Energy Database\nJharkhand",
       type: "Industry Project",
       icon: "fa-solid fa-database",
-      link: "state-energy-database-jharkhand.html",
+      // link: "state-energy-database-jharkhand.html",
       description: "Interactive ktoE energy database for Jharkhand, developed through systematic collection and integration of diverse public data sources to support Just Transition planning."
     },
     {
       name: "State Energy Database\nNorth East India (NER)",
       type: "Industry Project",
       icon: "fa-solid fa-globe",
-      link: "state-energy-database-ner.html",
+      // link: "state-energy-database-ner.html",
       description: "State-wise energy database spanning the North Eastern Region states of India."
     },
     {
