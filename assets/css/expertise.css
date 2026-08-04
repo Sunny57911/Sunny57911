@@ -1,0 +1,33 @@
+/* ==========================================================================
+   EXPERTISE
+   ========================================================================== */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--sp-5);
+}
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  text-align: left;
+}
+.expertise-card .icon-ring {
+  width: 3.6rem; height: 3.6rem; font-size: 1.5rem;
+  transition: box-shadow var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+}
+.expertise-card:hover .icon-ring {
+  color: var(--amber-400);
+  border-color: rgba(241,170,18,0.4);
+  box-shadow: 0 0 22px -4px rgba(241,170,18,0.5);
+}
+.expertise-card h3 { font-size: var(--step-1); margin-bottom: 0; white-space: pre-line; }
+.expertise-card p { font-size: var(--step--1); margin: 0; }
+.expertise-card .index-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}

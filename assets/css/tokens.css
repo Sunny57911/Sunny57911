@@ -1,0 +1,104 @@
+/* ==========================================================================
+   DESIGN TOKENS — Sunny Kumar Portfolio
+   Direction: dark instrument-panel / atmospheric-data aesthetic.
+   Grounded in the subject: radar scopes, isobar charts, night-sky telemetry.
+   ========================================================================== */
+
+:root {
+  /* ---- Surface -------------------------------------------------------- */
+  --bg-void: #05080a;
+  --bg-deep: #070d10;
+  --bg-rise: #0b1418;
+  --bg-grid-line: rgba(130, 196, 189, 0.055);
+
+  /* Glass panels */
+  --glass-fill: rgba(15, 28, 32, 0.56);
+  --glass-fill-soft: rgba(15, 28, 32, 0.34);
+  --glass-fill-strong: rgba(18, 34, 38, 0.78);
+  --glass-border: rgba(134, 205, 197, 0.16);
+  --glass-border-strong: rgba(148, 219, 210, 0.32);
+  --glass-blur: 18px;
+
+  /* ---- Brand accent (derived from original teal/gold identity) -------- */
+  --teal-200: #a9ecdf;
+  --teal-300: #74ddcb;
+  --teal-400: #3ecab3;
+  --teal-500: #17b8a3;
+  --teal-600: #109187;
+  --teal-700: #0a6a63;
+  --teal-900: #06302d;
+
+  --amber-300: #ffd97d;
+  --amber-400: #f8bf3c;
+  --amber-500: #f1aa12;
+  --amber-600: #c98a0c;
+
+  /* ---- Ink -------------------------------------------------------------*/
+  --ink-100: #eef6f5;
+  --ink-200: #d3e2e0;
+  --ink-300: #adc4c1;
+  --ink-500: #7d9895;
+  --ink-700: #4d605e;
+
+  /* ---- Semantic -------------------------------------------------------*/
+  --accent: var(--teal-500);
+  --accent-strong: var(--teal-300);
+  --accent-warm: var(--amber-500);
+  --text-primary: var(--ink-100);
+  --text-secondary: var(--ink-300);
+  --text-muted: var(--ink-500);
+  --border-hairline: var(--glass-border);
+  --focus-ring: var(--teal-300);
+
+  /* ---- Type -------------------------------------------------------------*/
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --step--1: clamp(0.78rem, 0.75rem + 0.1vw, 0.86rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+  --step-1: clamp(1.1rem, 1.03rem + 0.35vw, 1.3rem);
+  --step-2: clamp(1.35rem, 1.2rem + 0.7vw, 1.75rem);
+  --step-3: clamp(1.7rem, 1.4rem + 1.3vw, 2.4rem);
+  --step-4: clamp(2.2rem, 1.7rem + 2.2vw, 3.4rem);
+  --step-5: clamp(2.8rem, 2rem + 3.6vw, 4.6rem);
+
+  /* ---- Space (4px base) --------------------------------------------------*/
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 2.5rem;
+  --sp-8: 3rem;
+  --sp-9: 4rem;
+  --sp-10: 5rem;
+  --sp-12: 7rem;
+
+  /* ---- Shape / motion ----------------------------------------------------*/
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+
+  --container-w: 1180px;
+
+  --shadow-glass: 0 20px 60px -25px rgba(0, 0, 0, 0.65), 0 2px 0 rgba(255,255,255,0.02) inset;
+  --shadow-glow-teal: 0 0 0 1px rgba(23, 184, 163, 0.25), 0 0 32px -4px rgba(23, 184, 163, 0.35);
+  --shadow-glow-amber: 0 0 0 1px rgba(241, 170, 18, 0.3), 0 0 28px -6px rgba(241, 170, 18, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-med: 0ms;
+    --dur-slow: 0ms;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <script>document.documentElement.classList.replace("no-js","js");</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="State-wise energy database for the North Eastern Region of India, built by Sunny Kumar." />
+  <title>State Energy Database — NER India | Sunny Kumar</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/project-detail.css" />
+</head>
+<body>
+  <div class="atmos-field" aria-hidden="true"></div>
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-head container reveal">
+      <div class="eyebrow">Live dashboard</div>
+      <h1>State Energy Database — North East India</h1>
+      <div class="detail-meta">
+        <span class="badge is-live"><span class="dot"></span> Live</span>
+        <span class="mono-tag">Industry Project</span>
+      </div>
+      <p class="lede">
+        A state-wise breakdown of energy indicators across the North Eastern Region (NER)
+        states of India, built for cross-state comparison.
+      </p>
+    </section>
+
+    <section class="section container">
+      <div class="embed-frame card glass reveal">
+        <div class="embed-hint"><i class="fa-solid fa-arrows-up-down-left-right" aria-hidden="true"></i> Click the panel to open the full interactive view</div>
+        <div class="embed-shell" id="embedShell" data-src="assets/data/ner-states-dashboard.html" role="button" tabindex="0" aria-label="Open full-size NER states energy dashboard">
+          <iframe src="assets/data/ner-states-dashboard.html" title="NER States Energy Database"></iframe>
+          <span class="embed-zoom-tag"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i> Expand</span>
+        </div>
+      </div>
+
+      <div class="related-projects reveal">
+        <a href="projects.html" class="btn btn-ghost btn-sm"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to all projects</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <!-- Zoom modal -->
+  <div class="modal-veil zoom-modal" id="zoomModal">
+    <div class="modal-box glass" role="dialog" aria-modal="true" aria-label="Expanded dashboard view">
+      <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <iframe title="NER States Energy Database — expanded"></iframe>
+    </div>
+  </div>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/project-detail.js"></script>
+</body>
+</html>

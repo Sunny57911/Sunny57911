@@ -1,0 +1,80 @@
+/* ==========================================================================
+   PROJECT DETAIL — shared by every live dashboard page
+   ========================================================================== */
+
+.detail-meta {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+
+.embed-frame {
+  padding: var(--sp-3);
+  position: relative;
+}
+.embed-frame .embed-hint {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  padding: var(--sp-2) var(--sp-3) var(--sp-4);
+}
+.embed-frame .embed-hint i { color: var(--teal-300); }
+
+.embed-shell {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  cursor: zoom-in;
+  background: #0a1013;
+}
+.embed-shell iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* click anywhere opens the zoom modal */
+}
+.embed-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 80%, rgba(5,8,10,0.5) 100%);
+  pointer-events: none;
+}
+.embed-zoom-tag {
+  position: absolute;
+  bottom: var(--sp-3);
+  right: var(--sp-3);
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.4em 0.9em;
+  border-radius: var(--radius-full);
+  background: rgba(6,12,14,0.75);
+  border: 1px solid var(--glass-border-strong);
+  color: var(--ink-200);
+  pointer-events: none;
+}
+
+.zoom-modal .modal-box {
+  max-width: 1100px;
+  width: 94vw;
+  height: 88vh;
+  max-height: 88vh;
+  padding: var(--sp-3);
+}
+.zoom-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #0a1013;
+}
+
+.related-projects { margin-top: var(--sp-8); }

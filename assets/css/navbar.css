@@ -1,0 +1,145 @@
+/* ==========================================================================
+   NAVBAR — sticky glass instrument bar
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  padding: var(--sp-3) var(--sp-6);
+  background: var(--glass-fill-soft);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: background var(--dur-fast), padding var(--dur-fast), border-color var(--dur-fast);
+}
+.site-header.is-scrolled .navbar {
+  background: var(--glass-fill-strong);
+  padding-block: var(--sp-2);
+  border-color: var(--glass-border-strong);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-0);
+  color: var(--ink-100);
+  flex-shrink: 0;
+}
+.logo-image {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--glass-border-strong);
+  box-shadow: 0 0 0 3px rgba(23,184,163,0.12);
+}
+.logo small {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--teal-300);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  margin: 0 auto;
+}
+.nav-links a {
+  position: relative;
+  font-size: var(--step--1);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  padding: 0.3em 0;
+  transition: color var(--dur-fast);
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -4px;
+  height: 1.5px;
+  background: var(--teal-400);
+  transition: right var(--dur-med) var(--ease-out);
+}
+.nav-links a:hover { color: var(--ink-100); }
+.nav-links a:hover::after { right: 0; }
+.nav-links a.is-active { color: var(--ink-100); }
+.nav-links a.is-active::after { right: 0; background: var(--amber-500); }
+
+.action_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.55em 1.2em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border-strong);
+  color: var(--ink-100);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: border-color var(--dur-fast), color var(--dur-fast), background var(--dur-fast);
+}
+.action_btn:hover { border-color: var(--teal-400); color: var(--teal-200); background: rgba(23,184,163,0.08); }
+.action_btn--ghost { color: var(--text-secondary); border-color: var(--glass-border); }
+.action_btn--ghost:hover { border-color: var(--amber-400); color: var(--amber-300); background: rgba(241,170,18,0.08); }
+
+.toggle_btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--ink-100);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.dropdown_menu {
+  display: none;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-4) var(--sp-6) var(--sp-6);
+  background: var(--glass-fill-strong);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+}
+.dropdown_menu.open { display: flex; }
+.dropdown_menu li { width: 100%; }
+.dropdown_menu a {
+  display: block;
+  padding: 0.85em 0.2em;
+  font-family: var(--font-mono);
+  font-size: var(--step-0);
+  color: var(--ink-200);
+  border-bottom: 1px solid var(--glass-border);
+}
+.dropdown_menu a.is-active { color: var(--amber-400); }
+.dropdown_menu .action_btn { display: inline-flex; margin-top: var(--sp-3); border: 1px solid var(--glass-border-strong); }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .navbar > .action_btn { display: none; }
+  .toggle_btn { display: flex; }
+  .navbar { padding-inline: var(--sp-4); }
+}

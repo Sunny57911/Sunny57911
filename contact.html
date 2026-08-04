@@ -1,160 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Sunny Kumar</title>
-<link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace("no-js","js");</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Sunny Kumar — Meteorologist and Climate & Energy Modelling Consultant — by email, phone, or scheduled call." />
+  <title>Contact — Sunny Kumar</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
 </head>
 <body>
-
-<div class="contour-field" id="contourField"></div>
-
-<div class="shell">
-
-  <div id="site-header"></div>
+  <div class="atmos-field" aria-hidden="true"></div>
+  <div id="site-header-mount"></div>
 
   <main>
+    <section class="page-head container reveal">
+      <div class="eyebrow">Let's talk</div>
+      <h1>Contact</h1>
+      <p class="lede">Open to collaborations, consulting, and research conversations in climate science and renewable energy.</p>
+    </section>
 
-    <section style="padding-bottom:0;">
-      <div class="wrap">
-        <div class="eyebrow reveal in">Open channel</div>
-        <h1 class="reveal in" style="font-size:clamp(32px,5vw,52px);max-width:640px;">
-          Send a transmission.
-        </h1>
-        <p class="reveal in" style="max-width:560px;color:var(--text-muted);font-size:16.5px;margin-top:18px;">
-          For research collaboration, energy-modelling consultancy, or just to talk about cyclone tracks —
-          the channel below is open.
+    <section class="section container contact-grid">
+      <div class="contact-card card glass reveal">
+        <h2>Contact Details</h2>
+        <p>
+          Hi, I'm <strong>Sunny Kumar</strong>, a Meteorologist and Climate &amp; Energy
+          Modelling Consultant. Feel free to reach out for any inquiries or collaborations.
         </p>
+        <div class="contact-list">
+          <a href="mailto:sunnykumar57911@gmail.com">
+            <span class="icon-ring"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+            <span><span class="contact-label">Email</span><span class="contact-value">sunnykumar57911@gmail.com</span></span>
+          </a>
+          <a href="tel:+919309305715">
+            <span class="icon-ring"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+            <span><span class="contact-label">Phone</span><span class="contact-value">+91 9309305715</span></span>
+          </a>
+          <span class="contact-list-static">
+            <span class="icon-ring"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+            <span><span class="contact-label">Location</span><span class="contact-value">Gurugram, Haryana, India</span></span>
+          </span>
+          <a href="https://www.linkedin.com/in/sunny57911" target="_blank" rel="noopener">
+            <span class="icon-ring"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></span>
+            <span><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/sunny57911</span></span>
+          </a>
+          <a href="https://github.com/Sunny57911" target="_blank" rel="noopener">
+            <span class="icon-ring"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+            <span><span class="contact-label">GitHub</span><span class="contact-value">github.com/Sunny57911</span></span>
+          </a>
+        </div>
       </div>
-    </section>
 
-    <section class="tight">
-      <div class="wrap contact-grid">
-
-        <!-- CONTACT DETAILS -->
-        <div class="reveal">
-          <div class="card contact-card">
-            <div class="signal">
-              <span></span><span></span><span></span><span></span><span></span>
-              <b>SIGNAL: STRONG</b>
-            </div>
-            <ul class="contactlist">
-              <li>
-                <span class="contactlist__label">Email</span>
-                <a href="mailto:sunny@climatecompatiblefutures.com">sunny@climatecompatiblefutures.com</a>
-              </li>
-              <li>
-                <span class="contactlist__label">Gmail</span>
-                <a href="mailto:sunnykumar57911@gmail.com">sunnykumar57911@gmail.com</a>
-              </li>
-              <li>
-                <span class="contactlist__label">Phone</span>
-                <a href="tel:+919309305715">+91 93093 05715</a>
-              </li>
-              <li>
-                <span class="contactlist__label">Location</span>
-                <span>Gurugram, Haryana, India</span>
-              </li>
-              <li>
-                <span class="contactlist__label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/sunny57911/" target="_blank" rel="noopener">linkedin.com/in/sunny57911</a>
-              </li>
-              <li>
-                <span class="contactlist__label">GitHub</span>
-                <a href="https://github.com/Sunny57911" target="_blank" rel="noopener">github.com/Sunny57911</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="card" style="margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-            <div>
-              <div class="eyebrow" style="margin-bottom:8px;">Prefer a call?</div>
-              <h3 style="font-size:17px;">Book time directly on Calendly</h3>
-            </div>
-            <a href="https://calendly.com/sunny57911" target="_blank" rel="noopener" class="btn primary">Schedule a call →</a>
-          </div>
+      <div class="booking-panel card glass reveal">
+        <div class="tab-row" role="tablist">
+          <button class="tab-btn is-active" type="button" data-tab="tabCalendly" role="tab">Instant Book</button>
+          <button class="tab-btn" type="button" data-tab="tabRequest" role="tab">Request a Time</button>
         </div>
 
-        <!-- FORM -->
-        <div class="reveal">
-          <div class="card">
-            <div class="eyebrow" style="margin-bottom:18px;">Draft a message</div>
-            <form id="contactForm">
-              <label class="field">
-                <span>Name</span>
-                <input type="text" id="fName" required placeholder="Your name">
-              </label>
-              <label class="field">
-                <span>Email</span>
-                <input type="email" id="fEmail" required placeholder="you@example.com">
-              </label>
-              <label class="field">
-                <span>Message</span>
-                <textarea id="fMsg" rows="5" required placeholder="What are you working on?"></textarea>
-              </label>
-              <button type="submit" class="btn primary" style="width:100%;justify-content:center;margin-top:8px;">
-                Send via email →
-              </button>
-              <p style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:12px;">
-                Opens your email client, addressed to Sunny — nothing is sent from this page directly.
-              </p>
-            </form>
-          </div>
+        <div class="tab-panel is-active" id="tabCalendly">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/sunny57911" style="min-width:280px;height:600px;"></div>
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
 
+        <div class="tab-panel" id="tabRequest">
+          <div class="request-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Prefer not to use Calendly? Send a time that works for you — it's emailed to me directly, no account needed on your end.</span>
+          </div>
+          <form id="requestForm" novalidate>
+            <input type="hidden" name="access_key" value="45816b3a-5925-4921-a489-780d32f86fea" />
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="field-row">
+              <div class="field">
+                <label for="reqName">Name</label>
+                <input type="text" id="reqName" name="name" required />
+              </div>
+              <div class="field">
+                <label for="reqEmail">Email</label>
+                <input type="email" id="reqEmail" name="email" required />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="reqDate">Preferred date</label>
+                <input type="date" id="reqDate" name="date" required />
+              </div>
+              <div class="field">
+                <label for="reqTime">Preferred time (IST)</label>
+                <input type="time" id="reqTime" name="time" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="reqDuration">Duration</label>
+              <select id="reqDuration" name="duration">
+                <option value="15">15 minutes</option>
+                <option value="30" selected>30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reqMessage">What would you like to discuss?</label>
+              <textarea id="reqMessage" name="message" placeholder="A line or two of context helps me prepare."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-amber">Send Request <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+              <span class="form-status" id="requestStatus"></span>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <footer id="site-footer"></footer>
+  <div id="site-footer-mount"></div>
 
-</div>
-
-<style>
-  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start;}
-  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
-
-  .signal{display:flex;align-items:flex-end;gap:4px;margin-bottom:26px;}
-  .signal span{width:6px;background:var(--teal);border-radius:2px;display:block;}
-  .signal span:nth-child(1){height:8px;}
-  .signal span:nth-child(2){height:14px;}
-  .signal span:nth-child(3){height:20px;}
-  .signal span:nth-child(4){height:26px;}
-  .signal span:nth-child(5){height:32px;}
-  .signal b{font-family:var(--mono);font-size:10.5px;color:var(--text-dim);margin-left:10px;letter-spacing:0.05em;}
-
-  .contactlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;}
-  .contactlist li{display:flex;flex-direction:column;gap:4px;padding-bottom:14px;border-bottom:1px solid var(--line-soft);}
-  .contactlist li:last-child{border-bottom:none;padding-bottom:0;}
-  .contactlist__label{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-dim);}
-  .contactlist li a{font-size:15px;color:var(--text);}
-  .contactlist li a:hover{color:var(--teal);}
-  .contactlist li span:not(.contactlist__label){font-size:15px;}
-
-  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:0.04em;text-transform:uppercase;}
-  .field input, .field textarea{
-    font-family:var(--body);font-size:14.5px;color:var(--text);
-    background:var(--bg-panel-2);border:1px solid var(--line);border-radius:6px;
-    padding:12px 14px;resize:vertical;
-  }
-  .field input:focus, .field textarea:focus{outline:none;border-color:var(--teal);}
-</style>
-
-<script src="navbar.js"></script>
-<script src="footer.js"></script>
-<script src="script.js"></script>
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('fName').value;
-    const email = document.getElementById('fEmail').value;
-    const msg = document.getElementById('fMsg').value;
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
-    const body = encodeURIComponent(`${msg}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:sunny@climatecompatiblefutures.com?subject=${subject}&body=${body}`;
-  });
-</script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

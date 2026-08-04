@@ -1,0 +1,82 @@
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--sp-8);
+  align-items: start;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-card { position: sticky; top: 100px; }
+.contact-list { display: flex; flex-direction: column; gap: var(--sp-4); margin-top: var(--sp-6); }
+.contact-list a,
+.contact-list .contact-list-static {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--ink-200);
+  transition: color var(--dur-fast), gap var(--dur-fast);
+}
+.contact-list a:last-child,
+.contact-list .contact-list-static:last-child { border-bottom: none; }
+.contact-list a:hover { color: var(--teal-300); gap: var(--sp-5); }
+.contact-list .icon-ring { width: 2.6rem; height: 2.6rem; font-size: 1.05rem; flex-shrink: 0; }
+.contact-list .contact-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); display: block; letter-spacing: 0.06em; }
+.contact-list .contact-value { font-size: var(--step--1); }
+
+/* ---- Booking tabs ---------------------------------------------------------*/
+.booking-panel { padding: var(--sp-6); }
+.tab-row {
+  display: flex;
+  gap: var(--sp-2);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  background: rgba(6,12,14,0.5);
+  border: 1px solid var(--glass-border);
+  margin-bottom: var(--sp-6);
+}
+.tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.7em 1em;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-secondary);
+  transition: background var(--dur-fast), color var(--dur-fast);
+}
+.tab-btn.is-active {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+  color: #04140f;
+}
+
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; }
+
+.calendly-inline-widget {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.request-note {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  padding: var(--sp-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill-soft);
+  margin-bottom: var(--sp-6);
+  font-size: var(--step--1);
+  color: var(--text-secondary);
+}
+.request-note i { color: var(--amber-400); margin-top: 0.2em; }
+
+.form-actions { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+.form-status { font-family: var(--font-mono); font-size: var(--step--1); color: var(--teal-300); }

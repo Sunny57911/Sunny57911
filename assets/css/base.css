@@ -1,0 +1,360 @@
+/* ==========================================================================
+   BASE — reset, typography, ambient background, shared primitives
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* Belt-and-braces: decorative glows/sweeps (radar ring, ambient field)
+     are intentionally allowed to bleed past their own box for effect;
+     this guarantees that bleed can never cause a horizontal scrollbar. */
+  overflow-x: clip;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { padding: 0; margin: 0; }
+li { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+
+::selection { background: var(--teal-500); color: #04100e; }
+
+/* ---- Scrollbar (webkit) --------------------------------------------------*/
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--teal-700); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--teal-600); }
+
+/* ---- Ambient backdrop ---------------------------------------------------
+   A faint isobar/contour field + drifting radar glow, referencing weather
+   charts and radar scopes without being literal or loud. Fixed so it reads
+   as one continuous atmosphere behind every page. */
+.atmos-field {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(60vw 60vw at 82% -8%, rgba(23, 184, 163, 0.16), transparent 60%),
+    radial-gradient(50vw 50vw at -10% 30%, rgba(241, 170, 18, 0.07), transparent 60%),
+    repeating-radial-gradient(circle at 82% 8%, transparent 0, transparent 62px, var(--bg-grid-line) 63px, var(--bg-grid-line) 64px),
+    linear-gradient(180deg, var(--bg-void) 0%, var(--bg-deep) 45%, var(--bg-void) 100%);
+}
+.atmos-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bg-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid-line) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: radial-gradient(75% 60% at 50% 20%, #000 0%, transparent 75%);
+  opacity: 0.7;
+}
+
+/* ---- Layout --------------------------------------------------------------*/
+.container {
+  width: 100%;
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+}
+@media (max-width: 640px) { .container { padding-inline: var(--sp-4); } }
+
+main { display: block; }
+
+.section {
+  padding-block: var(--sp-10);
+}
+@media (max-width: 780px) { .section { padding-block: var(--sp-8); } }
+
+.section-head { max-width: 640px; margin-bottom: var(--sp-7); }
+
+/* ---- Page head (shared: used at the top of every inner page) -----------*/
+.page-head { padding-top: var(--sp-9); padding-bottom: var(--sp-3); }
+.page-head h1 { font-size: var(--step-4); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: var(--sp-3);
+}
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px 2px rgba(23, 184, 163, 0.7);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  margin: 0 0 var(--sp-4);
+  color: var(--ink-100);
+}
+h1 { font-size: var(--step-5); font-weight: 650; }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+
+p { margin: 0 0 var(--sp-4); color: var(--text-secondary); }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink-100); font-weight: 600; }
+
+.lede { font-size: var(--step-1); color: var(--text-secondary); }
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* ---- Buttons ---------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.85em 1.5em;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-0);
+  border: 1px solid transparent;
+  transition: transform var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard), background var(--dur-fast);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-700));
+  color: #03110f;
+  box-shadow: var(--shadow-glow-teal);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(23,184,163,0.4), 0 14px 30px -8px rgba(23,184,163,0.5); }
+.btn-ghost {
+  background: var(--glass-fill-soft);
+  border-color: var(--glass-border);
+  color: var(--ink-100);
+  backdrop-filter: blur(var(--glass-blur));
+}
+.btn-ghost:hover { border-color: var(--glass-border-strong); transform: translateY(-2px); }
+.btn-amber {
+  background: linear-gradient(135deg, var(--amber-400), var(--amber-600));
+  color: #241703;
+  box-shadow: var(--shadow-glow-amber);
+}
+.btn-amber:hover { transform: translateY(-2px); }
+.btn-sm { padding: 0.6em 1.1em; font-size: var(--step--1); }
+.btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Glass panel / card -------------------------------------------------*/
+.glass {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--shadow-glass);
+}
+
+.card {
+  padding: var(--sp-6);
+  transition: transform var(--dur-fast) var(--ease-standard), border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+.card:hover { transform: translateY(-4px); border-color: var(--glass-border-strong); }
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  border: none;
+  margin: var(--sp-8) 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.05em;
+  padding: 0.35em 0.85em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  background: var(--glass-fill-soft);
+}
+.badge.is-live { color: var(--teal-200); border-color: rgba(23,184,163,0.35); }
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+/* ---- Tag cloud (shared: used on home + about pages) ---------------------*/
+.tag-cloud { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.tag-cloud span, .tag-cloud a {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  padding: 0.4em 0.8em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  color: var(--ink-200);
+  background: var(--glass-fill-soft);
+}
+.tag-cloud a { display: inline-flex; align-items: center; gap: 0.4em; transition: border-color var(--dur-fast), color var(--dur-fast); }
+.tag-cloud a:hover { border-color: var(--teal-400); color: var(--teal-200); }
+
+/* ---- Reveal-on-scroll ---------------------------------------------------*/
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+/* If JS never runs, nothing should stay permanently invisible.
+   html starts with class="no-js"; a synchronous inline script in <head>
+   swaps it to "js" the instant script execution is available. */
+html.no-js .reveal { opacity: 1 !important; transform: none !important; }
+
+/* ---- Icon wrap (used across expertise/projects/contact) ----------------*/
+.icon-ring {
+  width: 3.1rem;
+  height: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(23,184,163,0.28), rgba(23,184,163,0.04));
+  border: 1px solid var(--glass-border);
+  color: var(--teal-300);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* ---- Back to top --------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  right: var(--sp-5);
+  bottom: var(--sp-5);
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-fill-strong);
+  border: 1px solid var(--glass-border-strong);
+  color: var(--teal-300);
+  backdrop-filter: blur(var(--glass-blur));
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity var(--dur-fast), transform var(--dur-fast);
+}
+.back-to-top.is-shown { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover { border-color: var(--teal-400); color: var(--teal-200); }
+
+/* ---- Modal base (reused by project detail zoom + coming-soon) ----------*/
+.modal-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(3, 7, 8, 0.78);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) var(--ease-standard);
+}
+.modal-veil.is-open { opacity: 1; pointer-events: auto; }
+.modal-box {
+  width: 100%;
+  max-width: 560px;
+  max-height: 86vh;
+  overflow: auto;
+  position: relative;
+  padding: var(--sp-7);
+  transform: translateY(14px) scale(0.98);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+.modal-veil.is-open .modal-box { transform: translateY(0) scale(1); }
+.modal-close {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-200);
+}
+.modal-close:hover { border-color: var(--glass-border-strong); color: #fff; }
+
+/* ---- Form controls -------------------------------------------------------*/
+.field { margin-bottom: var(--sp-5); }
+.field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 0.85em 1em;
+  background: rgba(6, 12, 14, 0.55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--ink-100);
+  transition: border-color var(--dur-fast);
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--teal-400);
+  outline: none;
+}
+.field textarea { resize: vertical; min-height: 100px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
+@media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+
+/* ---- Utility -------------------------------------------------------------*/
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0; }
