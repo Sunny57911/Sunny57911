@@ -7,13 +7,11 @@ A modern, responsive, multi-page portfolio website showcasing my work in **Clima
 
 ## 🌐 Live Website
 **Portfolio:** 
-```
 > https://sunny57911.github.io/Sunny-Kumar/
-```
+
 **GitHub Repository:** 
-```
 > https://github.com/Sunny57911/Sunny-Kumar
-```
+
 
 ---
 
